@@ -5,11 +5,17 @@ import "./BasicExamplePortal.css"
 const portalRoot= document.getElementById("portal-root")
 
 interface ModalProps {
-    children:ReactNode
+    children:ReactNode;
+    onClose: () => void;
 }
 
-const Modal = ({children}: ModalProps) =>{
-    return createPortal( <div className="modal">{children}</div>, portalRoot as HTMLElement)
+const Modal = ({children, onClose }: ModalProps) =>{
+    return createPortal( 
+    <div className="modal">
+        <button onClick={onClose}>Close Modal</button>
+        {children}
+    </div>, 
+    portalRoot as HTMLElement)
 }
 
 interface Props {
@@ -27,9 +33,8 @@ const CustomModal = ({children}: Props) => {
         <div>
             <button onClick={toggleModal}>Toggle Model</button>
             {showModal && (
-                <Modal>
-                    <h2>{children}</h2>
-                    <button onClick={toggleModal}>Close</button>
+                <Modal onClose={toggleModal}>
+                   {children}    
                 </Modal>
             )}
         </div>
