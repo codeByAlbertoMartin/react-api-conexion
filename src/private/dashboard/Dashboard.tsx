@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { CharacterData } from "./components/CharacterData";
 import type { Character } from "./models/character.model";
 import { GetCharater } from "./services/character.service";
-import { useUserContext } from "../context/user.context";
+import { useUserContext } from "../../context/user.context";
 
 export function Dashboard() {
     const { user, setUser } = useUserContext();

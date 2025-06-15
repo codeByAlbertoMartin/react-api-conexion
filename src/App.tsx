@@ -1,11 +1,11 @@
 import './App.css'
-import { Providers } from './Providers'
-import { Router } from './Router'
+import { Providers } from './providers/Providers'
+import { AppRouter } from './App.router'
 
 function App() {
   return (
      <Providers>
-      <Router/>
+      <AppRouter/>
     </Providers>
     
   )
