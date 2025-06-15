@@ -1,13 +1,14 @@
 import type { ReactNode } from "react";
+import { UserProvider } from "./context";
 
 interface Props{
-    children?: ReactNode;
+    children: ReactNode;
 }
 
 export const Providers = ({ children }: Props) => {
-    return <>
+    return <UserProvider>
         {children}
-         </>
+         </UserProvider>
        
 }
 

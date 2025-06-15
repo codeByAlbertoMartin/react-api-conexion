@@ -29,6 +29,7 @@ export const UserProvider = ({ children }: Params) => {
 }
 
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useUserContext = () =>{
     const context = useContext(UserContext);
 
