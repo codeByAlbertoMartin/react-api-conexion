@@ -1,14 +1,13 @@
 import './App.css'
-import { UserProvider} from './context/user.context'
-import { Dashboard } from './dashboard/Dashboard'
+import { Providers } from './Providers'
+import { Router } from './Router'
 
 function App() {
   return (
-    <>
-    <UserProvider>
-      <Dashboard/>
-    </UserProvider>
-    </>
+     <Providers>
+      <Router/>
+    </Providers>
+    
   )
 }
 
